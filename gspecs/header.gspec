@@ -1,0 +1,45 @@
+@objects
+    header                  css       .heading-lead
+        title                   css     .heading-group__primary
+        subtitle             css     .heading-group__subtitle
+    logo                     css      .branding__site-logo
+    navigation            css    .nav
+        hamburger       css   .trigger-menu.js-menu
+
+= Header =
+    header:
+        @on desktop
+            height 875px 
+            width 98% of viewport/width
+
+    logo:
+        @on desktop
+            width 180px
+            height 75px
+            visible
+
+    header.title:
+        @on desktop
+            text is "Our Culture"
+            css font-size is "33px" 
+            css font-family starts "\"Montserrat Bold" 
+            css font-family ends "sans-serif"
+            above header.subtitle 33px
+            inside header 2440px top
+            inside header 585px left
+
+    header.subtitle:
+        @on desktop
+            text is "GREAT TEAM / GREAT CLIENTS / GREAT WORK"  
+            css font-size is "15px"   
+            css font-family starts "\"Montserrat Light" 
+            css font-family ends "sans-serif" 
+            below header.title 20px 
+            inside header 320px top
+            inside header 520px left
+
+    navigation.hamburger:
+        @on desktop
+            height 54px
+            width 54px
+            visible

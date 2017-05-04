@@ -1,0 +1,15 @@
+@import header.gspec
+@import footer.gspec
+
+@objects
+    quote_content    css    .content-group__quote
+    text_content    css    .content-group__text
+
+= Main section =
+    quote_content:
+        @on desktop
+            visible
+
+    text_content:
+        @on desktop
+            visible

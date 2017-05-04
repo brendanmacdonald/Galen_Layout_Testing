@@ -1,0 +1,105 @@
+@objects
+    footer              css       .footer
+    footerTop        css       .footer--featured-top
+        phoneIcon   css       .icon-phone
+        emailIcon     css       .icon-letter
+        mapIcon      css      .icon-map
+    footerMiddle    css    .footer--featured-middle
+        menu           css    #block-candw-footer        
+        partnersLinks    css    .partners-links
+            partnerIcons    css    .logo-links>ul>li>a>img
+    footerBottom    css     .footer--bottom
+        drupal8Logo    css    .logo-links>p>a>img
+        facebookIcon    css    .icon.icon--facebook
+        twitterIcon    css    .icon.icon--linkedin
+        linkedinIcon    css    .icon.icon--twitter
+        footerIconLinks    css    #block-footericonlinks
+
+= Footer =
+    footer:
+        @on desktop
+            height 682px 
+            width 100% of viewport/width
+            visible
+
+    footerTop:
+        @on desktop
+            height 355px 
+            width 100% of viewport/width
+            visible
+
+    footerTop.phoneIcon:
+        @on desktop
+            height 127px 
+            width 181px
+            visible	
+            text is "+44 (0)20 7193 0834"
+
+    footerTop.emailIcon:
+        @on desktop
+            height 127px 
+            width 288px
+            visible 
+            text is "hello@cameronandwilding.com"
+
+    footerTop.mapIcon:
+        @on desktop
+            height 127px 
+            width 137px
+            visible    
+            text is "Google-Map Us"        
+
+    footerMiddle:
+        @on desktop
+            height 200px 
+            width 100% of viewport/width
+            visible       
+
+    footerMiddle.menu:
+        @on desktop
+            text contains "Drupal Give"
+            text contains "Join Us"
+            text contains "Insight"
+            text contains "D8 Whitepaper Signup"
+            height 120px 
+            width 32% of viewport/width
+            visible           
+
+    footerMiddle.partnersLinks:
+        @on desktop
+            text is "Partners with:"
+            height 92px 
+            width 61% of viewport/width
+            visible   
+
+    footerMiddle.partnersLinks.partnerIcons:
+        @on desktop
+            visible
+
+    footerBottom:
+        @on desktop
+            text is "Powered by"
+            visible
+
+    footerBottom.drupal8Logo:
+        @on desktop
+            visible      
+            left-of footerBottom.facebookIcon 387px
+
+    footerBottom.facebookIcon:
+        @on desktop
+            visible    
+
+    footerBottom.twitterIcon:
+        @on desktop
+            visible    
+
+    footerBottom.linkedinIcon:
+        @on desktop
+            visible       
+
+    footerBottom.footerIconLinks:
+        @on desktop
+            visible 
+            right-of footerBottom.twitterIcon 452px
+                 

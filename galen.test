@@ -1,0 +1,35 @@
+@@ set 
+    base_url http://www.cameronandwilding.com
+
+@@ parameterized
+    | browser |
+    | chrome  |
+    | firefox    |
+
+@@ parameterized
+    | deviceName | tags      | size     |
+    | mobile     | iPhone 6   | 375x667  |
+    | tablet | iPad Air | 768x1024|
+    | desktop    | mac13   | 1400x900 |
+
+
+Our Culture page on ${deviceName} device in ${browser} browser
+   selenium ${browser} ${base_url} ${size}
+       check gspecs/homepage.gspec --include ${deviceName}
+
+
+
+#@@ set 
+#    browser_size 1024x780
+#    browserstack_url http://${browserstack.username}:${browserstack.key}@hub.browserstack.com/wd/hub
+
+
+#@@ Parameterized
+#    | deviceName     | tags       | gridArgs | 
+#    | iPhone-6S      | mobile     | --dc.browserName iPhone --dc.platform "MAC" --dc.device "iPhone 6S" --dc.emulator "true" --dc.browserstack.debug true --dc.browserstack.tunnel true|
+#    | OSX-Sierra-Chrome-v56  | desktop    | --size ${browser_size} --browser chrome --dc.browser_version 56 --dc.os "OS X" --dc.os_version "Sierra" --dc.browserstack.debug true --dc.browserstack.tunnel true| 
+   
+
+#Home page on ${deviceName} device in ${deviceName} browser
+#   selenium grid ${browserstack_url} --page ${base_url} ${gridArgs}
+#        check gspecs/homepage.gspec --include ${tags}    
